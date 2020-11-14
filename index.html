@@ -1,0 +1,286 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Team Delta</title>
+    <link rel="shortcut icon" type="image/x-icon" href="">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="stylepast.css">
+    <link rel="stylesheet" href="animate.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
+    <!--<link rel="stylesheet" href="style.css">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/wow.min.js"></script>
+    <script src="https://kit.fontawesome.com/4bea434f10.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://wowjs.uk/css/libs/animate.css">
+    <script src="https://wowjs.uk/dist/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+    <style type="text/css">
+    </style>
+    <style>
+        header {
+            z-index: 500;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            font-size: 16px;
+            height: 50px;
+            padding: 1rem;
+            color: white;
+            background: black;
+            display: flex;
+            align-items: center;
+            letter-spacing: 5px;
+            opacity: 0.8;
+        }
+
+        .active {
+            background-color: #4CAF50;
+        }
+
+
+
+
+        /*html {
+            background: #eee;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            width: 300px;
+            height: 300px;
+            border-radius: 5px;
+            box-shadow: 0 2px 30px rgba(black, .2);
+            background: lighten(#f0f4c3, 10%);
+            position: relative;
+            overflow: hidden;
+            transform: translate3d(0, 0, 0);
+        }
+
+        .wave {
+            opacity: .4;
+            position: absolute;
+            top: -65%;
+            left: 50%;
+            background: #0af;
+            width: 500px;
+            height: 500px;
+            margin-left: -250px;
+            margin-top: -250px;
+            transform-origin: 50% 48%;
+            border-radius: 43%;
+            animation: drift 3000ms infinite linear;
+        }
+
+            .wave.-three {
+                animation: drift 5000ms infinite linear;
+            }
+
+            .wave.-two {
+                animation: drift 7000ms infinite linear;
+                opacity: .1;
+                background: yellow;
+            }
+
+        .box:after {
+            content: '';
+            display: block;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(#e8a, 1), rgba(#def, 0) 80%, rgba(white, .5));
+            z-index: 11;
+            transform: translate3d(0, 0, 0);
+        }
+
+        .title {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            z-index: 1;
+            line-height: 300px;
+            text-align: center;
+            transform: translate3d(0, 0, 0);
+            color: white;
+            text-transform: uppercase;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: .4em;
+            font-size: 24px;
+            text-shadow: 0 1px 0 rgba(black, .1);
+            text-indent: .3em;
+        }
+
+        @keyframes drift {
+            from {
+                transform: rotate(0deg);
+            }
+
+            from {
+                transform: rotate(360deg);
+            }
+        }*/
+        .circle {
+            margin: 25px 10px;
+            width: 200px;
+            color: #fff;
+            font-size: 32px;
+            line-height: 200px;
+            text-align: center;
+            height: 200px;
+            border-radius: 100px;
+        }
+
+        .bg-green {
+            background: #5bd5a0;
+        }
+
+        .bg-yellow {
+            background: #ffcc35;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $('#movetopbt').bind('click', function () {
+                $('html, body').animate({ scrollTop: '0' }, 680);
+            });
+            // 애니메이션 효과로 자연스럽게 이동됨, 0.68초
+
+            $('#movetopbt').on('click', function () {
+                $('html').scrollTop('0');
+            });
+            // 애니메이션 효과없이 즉시 해당 위치 0 지점으로 이동함
+        });
+        $(document).ready(function () {
+            $('#scrollbt').bind('click', function () {
+                $('html, body').animate({ scrollTop: '300' }, 580);
+            });
+            // 애니메이션 효과로 자연스럽게 이동됨, 0.68초
+
+            $('#scrollbt').on('click', function () {
+                $('html').scrollTop('300');
+            });
+            // 애니메이션 효과없이 즉시 해당 위치 0 지점으로 이동함
+        });
+    </script>
+    <style>
+        .neon {
+            animation: neon 1s ease infinite;
+            -moz-animation: neon 1s ease infinite;
+            -webkit-animation: neon 1s ease infinite;
+        }
+
+        @keyframes neon {
+            0%, 100% {
+                text-shadow: 0 0 1vw #FA1C16, 0 0 3vw #FA1C16, 0 0 10vw #FA1C16, 0 0 10vw #FA1C16, 0 0 .4vw #FED128, .5vw .5vw .1vw #806914;
+                color: #FED128;
+            }
+
+            50% {
+                text-shadow: 0 0 .5vw #800E0B, 0 0 1.5vw #800E0B, 0 0 5vw #800E0B, 0 0 5vw #800E0B, 0 0 .2vw #800E0B, .5vw .5vw .1vw #40340A;
+                color: #806914;
+            }
+        }
+
+        .flux {
+            animation: flux 2s linear infinite;
+            -moz-animation: flux 2s linear infinite;
+            -webkit-animation: flux 2s linear infinite;
+            -o-animation: flux 2s linear infinite;
+        }
+
+        @keyframes flux {
+            0%, 100% {
+                text-shadow: 0 0 1vw #1041FF, 0 0 3vw #1041FF, 0 0 10vw #1041FF, 0 0 10vw #1041FF, 0 0 .4vw #8BFDFE, .5vw .5vw .1vw #147280;
+                color: #28D7FE;
+            }
+
+            50% {
+                text-shadow: 0 0 .5vw #082180, 0 0 1.5vw #082180, 0 0 5vw #082180, 0 0 5vw #082180, 0 0 .2vw #082180, .5vw .5vw .1vw #0A3940;
+                color: #146C80;
+            }
+        }
+
+        .blink {
+            color: yellow;
+            text-decoration: none;
+            transition: 1s;
+            text-align : left;
+        }
+
+        .blink:hover {
+            text-shadow: 0 0 .10em, 0 0 .30em;
+        }
+        .blink2 {
+            color: cornflowerblue;
+            text-decoration: none;
+            transition: 1s;
+            text-align: right;
+        }
+
+        .blink2:hover {
+            text-shadow: 0 0 .10em, 0 0 .30em;
+        }
+    </style>
+</head>
+<body style="text-align : center; background :linear-gradient(to right, #3b5c53, #589ac6, #3b5c53);/*(, #3b5c53, white)*/">
+    <!--<header style="text-align: left;">
+      <nav>
+        <span class="active" style="color: white; font-size: 25px"><a href="#" style="color: white; text-decoration: none;">Main</a></span>
+        <span><a href="#wrap3" style="color: white; text-decoration: none;">소개/수상</a></span>
+        <span><a href="#project" style="color: white; text-decoration: none;">프로젝트</a></span>
+        <span><a href="#comments" style="color: white; text-decoration: none;">방명록</a></span>
+      </nav>
+    </header>-->
+    <!--<div style="background-image: url(banner-982162_1920.jpg); width: 100%;">
+        <div class='box' style="margin:0 auto;">
+      <div class='wave -one'></div>
+      <div class='wave -two'></div>
+      <div class='wave -three'></div>
+      <div class='title'>Capacities</div>
+    </div></div>-->
+    <div style="height : 100vh;">
+        <div style="background-image: url(banner-982162_1920.jpg); /*no-repeat 10% 50%, -webkit-gradient(linear, left top, left bottom, from(white), to(black));*/ width : auto; height : 25vh; border-bottom: thick solid black; border-radius: 0px 0px 100px 100px;">
+            <!--<img src="banner-982162_1920.jpg" style=" height : 30vh;"/>-->
+        </div>
+        <div style="margin-top : 2%; text-align: center;" data-wow-delay="0.5s" class="wow zoomIn">
+            <img src="logo.png" style="width : 100px; height : 100px; border-radius : 100px;" />
+            <p style="font-size : 8.5vw; margin-top : -3vh">𝓣𝓮𝓪𝓶 𝓓𝓮𝓵𝓽𝓪</p>
+            <p style="font-family : '전주 완판본 순B'; font-size : 25px; margin-top : -25px;">팀 델타</p>
+        </div>
+        <div id="scrollbt" data-wow-delay="1s" class="wow zoomIn">
+            <i class="fas fa-sort-down fa-4x"></i>
+        </div>
+    </div>
+
+    <div style="position: fixed; bottom: 2px; right: 10px" id="movetopbt">
+        <span style="color : cadetblue"><i class="fas fa-sort-up fa-5x"></i></span>
+    </div>
+    <div style="height : 100vh; background-color : black; color : palegoldenrod; text-align : center;">
+        <div style="height : 8vh;"></div>
+        <div class="container" style="font-size : 10vh;">
+            <div class="neon">What is </div>
+            <div class="flux">Team Delta? </div>
+
+        </div>
+        <div style="margin-left : 10%;margin-top:2%;font-size : 30px;" class="blink">수학, 프로그래밍 연구 커뮤니티</div>
+        <div style="margin-left : 10%;font-size : 20px;" class="blink">다양한 유저들과 함께 수많은 문제들을 토론하고 해결해보세요! 퍼즐, 알고리즘 문제는 언제나 환영입니다!</div>
+        <div style="margin-right : 10%;margin-top:2%;font-size : 30px;" class="blink2">입시/면접 경험 공유</div>
+        <div style="margin-right : 10%;font-size : 20px;" class="blink2">영재고, 영재원 학생들과 함께 입시 및 면접 경험을 공유해봐요!</div>
+        <div style="margin-left : 10%;margin-top:2%;font-size : 30px;" class="blink">프로젝트 진행</div>
+        <div style="margin-left : 10%;font-size : 20px;" class="blink">미해결 문제 도전, 게임 등의 프로그래밍 프로젝트 진행에 참여하세요. 능력이 있다면 자유롭게 도전해주세요!</div>
+    </div>
+</body>
+</html>
